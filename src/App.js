@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {Button, Container} from "@mui/material";
+import {Container, Pagination, CircularProgress} from "@mui/material";
 
 import Launches from "./components/Launches";
 import Banner from "./components/Banner";
@@ -115,32 +115,29 @@ function App() {
 
     useEffect(() => {
         fetchData(currentPage);
-    }, []);
+    }, [currentPage]);
 
-    const nextPage = () => {
-        setCurrentPage(currentPage + 1)
-        fetchData(currentPage + 1)
-    }
-    const prevPage = () => {
-        setCurrentPage(currentPage - 1)
-        fetchData(currentPage - 1)
-    }
+    const handleChange = (event, value) => {
+        setCurrentPage(value);
+    };
 
     return (
         <div>
             <Banner total={data["totalDocs"]}/>
-            <Container>
+            <Container fixed sx={{py: 5}}>
                 {data["docs"] ? (
-                    <div>
+                    <div className="wrapper">
                         <Launches launches={data["docs"]}/>
-                        <p>Page {data["page"]} / {data["totalPages"]} </p>
-                        <Button variant="outlined" onClick={prevPage} disabled={currentPage === 1}>Prev Page</Button>
-                        <Button variant="outlined" onClick={nextPage} disabled={currentPage === data["totalPages"]}>Next
-                           Page</Button>
-
+                        <Pagination
+                            onChange={handleChange}
+                            count={data["totalPages"]}
+                            color="primary"
+                            sx={{my: 5}}
+                            className="pagination"
+                        />
                    </div>
                 ) : (
-                    <div>Loading...</div>
+                    <div className="wrapper"><CircularProgress /></div>
                 )}
 
             </Container>
