@@ -122,7 +122,7 @@ function App() {
     };
 
     return (
-        <div>
+        <section className="mainSection">
             <Banner total={data["totalDocs"]}/>
             <Container fixed sx={{py: 5}}>
                 {data["docs"] ? (
@@ -141,8 +141,14 @@ function App() {
                 )}
 
             </Container>
+            <div className="bgBottom">
+                <div className="horizontalLine horizontalLineBottom">
+                    <div className="circle"></div>
+                </div>
+                <div className="verticalLine verticalLineBottom"></div>
+            </div>
 
-        </div>
+        </section>
     );
 }
 export default App;

@@ -27,40 +27,11 @@
   z-index: 2;
 }
 
-/* ADDITIONAL ELEMENTS */
-
-.verticalLine {
-  border-left: 0.7px solid var(--transparent-white);
-  height: 100%;
-  position: absolute;
-  left: 5%;
-}
-
-.horizontalLine {
-  border-bottom: 0.7px solid var(--transparent-white);
-  width: 100%;
-  position: relative;
-}
-
-.circle {
-  width: 200px;
-  height: 200px;
-  border: 0.7px solid var(--transparent-white);
-  border-radius: 50%;
-  position: absolute;
-  right: 2%;
-  transform: translateY(-50%);
-}
-
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 600px) {
   .mainHeading {
     font-size: 3.7rem;
-  }
-
-  .verticalLine {
-    left: 10%;
   }
 }

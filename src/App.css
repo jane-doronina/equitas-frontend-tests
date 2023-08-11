@@ -1,3 +1,8 @@
+.mainSection {
+  position: relative;
+  padding-bottom: 220px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -11,4 +16,52 @@
 .pagination button.Mui-selected:hover {
   background-color: black;
   color: white;
+}
+
+.bgBottom {
+  background: linear-gradient(to bottom, white, rgb(29, 48, 120));
+  width: 100vw;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+}
+
+.horizontalLine {
+  border-bottom: 0.7px solid var(--transparent-white);
+  width: 100%;
+  position: relative;
+}
+
+.horizontalLineBottom {
+  top: 150px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border: 0.7px solid var(--transparent-white);
+  border-radius: 50%;
+  position: absolute;
+  right: 2%;
+  transform: translateY(-50%) ;
+}
+
+.verticalLine {
+  border-left: 0.7px solid var(--transparent-white);
+  height: 100%;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+}
+
+.verticalLineBottom {
+  bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .verticalLine {
+    left: 10%;
+  }
 }
