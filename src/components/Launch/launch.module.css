@@ -1,5 +1,58 @@
+.launchCard {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
 
-.launchTitle{
-    font-weight: bold;
-    font-size: large;
+.cardInfoWrapper {
+    padding: 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cardInfoWrapper p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.7px solid var(--transparent-white);
+}
+
+.launchTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.launchImg {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.dataWrapper {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.learnMore {
+    display: flex;
+    margin-top: 30px;
+}
+
+.highlighted {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
