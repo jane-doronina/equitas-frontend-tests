@@ -1,5 +1,5 @@
 .bannerBg {
-  background: linear-gradient(to top, white 5%, rgb(29, 48, 120) 40%, rgb(37, 31, 29) 70%);
+  background: linear-gradient(to top, white 5%, var(--dark-blue) 40%, var(--dark-grey) 70%);
   width: 100vw;
   height: 750px;
   position: relative;
@@ -30,14 +30,14 @@
 /* ADDITIONAL ELEMENTS */
 
 .verticalLine {
-  border-left: 0.7px solid rgba(255, 255, 255, 0.441);
+  border-left: 0.7px solid var(--transparent-white);
   height: 100%;
   position: absolute;
   left: 5%;
 }
 
 .horizontalLine {
-  border-bottom: 0.7px solid rgba(255, 255, 255, 0.441);
+  border-bottom: 0.7px solid var(--transparent-white);
   width: 100%;
   position: relative;
 }
@@ -45,7 +45,7 @@
 .circle {
   width: 200px;
   height: 200px;
-  border: 0.7px solid rgba(255, 255, 255, 0.441);
+  border: 0.7px solid var(--transparent-white);
   border-radius: 50%;
   position: absolute;
   right: 2%;
