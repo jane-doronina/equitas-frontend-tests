@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import {Container, Pagination, CircularProgress} from "@mui/material";
 
 import Launches from "./components/Launches";
@@ -6,7 +6,7 @@ import Banner from "./components/Banner";
 import './App.css';
 
 function App() {
-
+    const containerRef = useRef(null);
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1)
     const apiUrl = 'https://api.spacexdata.com/v4/launches/query';
@@ -118,13 +118,14 @@ function App() {
     }, [currentPage]);
 
     const handleChange = (event, value) => {
-        setCurrentPage(value);
+        setCurrentPage(value); // set the current page
+        containerRef.current.scrollIntoView({ behavior: 'smooth' }); // scroll to the top of the container
     };
 
     return (
         <section className="mainSection">
             <Banner total={data["totalDocs"]}/>
-            <Container fixed sx={{py: 5}}>
+            <Container ref={containerRef} fixed sx={{py: 5}}>
                 {data["docs"] ? (
                     <div className="wrapper">
                         <Launches launches={data["docs"]}/>
