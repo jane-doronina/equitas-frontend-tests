@@ -12,6 +12,8 @@ Without any restrictions regarding time and API calls the current user experienc
 
 ### Links
 [Github repository](https://github.com/jane-doronina/equitas-frontend-tests)
+[Deployed website](https://equitas-frontend-test-zhanna-doronina.netlify.app)
+
 
 ### Screenshots
 
