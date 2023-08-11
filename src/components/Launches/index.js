@@ -1,6 +1,5 @@
 import {Grid} from "@mui/material";
 import Launch from "../Launch";
-import styles from './launches.module.css';
 
 const Launches = ({launches}) =>  {
     return (
