@@ -1,7 +1,9 @@
-import './App.css';
 import {useState, useEffect} from "react";
-import Launches from "./components/Launches";
 import {Button, Container} from "@mui/material";
+
+import Launches from "./components/Launches";
+import Banner from "./components/Banner";
+import './App.css';
 
 function App() {
 
@@ -126,9 +128,8 @@ function App() {
 
     return (
         <div>
-
+            <Banner total={data["totalDocs"]}/>
             <Container>
-                <p>Total Launches: {data["totalDocs"]}</p>
                 {data["docs"] ? (
                     <div>
                         <Launches launches={data["docs"]}/>
