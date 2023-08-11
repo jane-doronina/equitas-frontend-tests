@@ -125,7 +125,7 @@ function App() {
     return (
         <section className="mainSection">
             <Banner total={data["totalDocs"]}/>
-            <Container ref={containerRef} fixed sx={{py: 5}}>
+            <Container ref={containerRef} fixed sx={{pt: 2, pb: 5}}>
                 {data["docs"] ? (
                     <div className="wrapper">
                         <Launches launches={data["docs"]}/>
@@ -133,7 +133,7 @@ function App() {
                             onChange={handleChange}
                             count={data["totalPages"]}
                             color="primary"
-                            sx={{my: 5}}
+                            sx={{mt: 8, mb: 5}}
                             className="pagination"
                         />
                    </div>
